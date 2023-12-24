@@ -1,0 +1,176 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        .navbar{
+            overflow: hidden;
+            background-color: rgb(231, 181, 120);
+        }
+        
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: rgb(22, 22, 22);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .navbar a:hover, .dropdown: hover .btn{
+            box-sizing: border-box;
+        }
+        body{
+            margin-left: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(0, 0, 0);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .column img{
+            margin: 5px;
+
+        }
+        .column{
+            float: left;
+            width: 40%;
+            padding: 2px;
+
+        }
+     .row::after{
+         content: "";
+         display: table;
+         clear: both;
+     }
+     .dropdown{
+       float: left;
+       overflow: hidden;
+     }
+     .dropdown .btn{
+        font-size: 16 px;
+        border: none;
+        outline: none;
+        color: black;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+        font-weight: bold;
+     }
+     .dropdown-content{
+        display: none;
+        position: absolute;
+        background-color:rgb(231, 181, 120) ;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+     }
+     .dropdown-content a{
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+     }
+      .btn a:hover{
+        background-color: rgb(121, 129, 129);
+     }
+     .dropdown:hover .dropdown-content{
+        display: block;
+     }
+     .search{
+        float: right;
+        padding: 6px;
+        border: none;
+        margin-top: 8px;
+        margin-right: 16px;
+        font-size: 17px;
+     }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" style="font-weight:14px;">Home</a>
+        <a href="Places.html">Places</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="Weather.html">Weather</a>
+        <a href="About.html">About</a>
+        <div class="dropdown">
+            <button class="btn">Profile
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a class="links" href="signup.html">Sign-up</a>
+                <a class="links" href="login.html">Login</a>
+                <a class="links" href="profileCard.php">Profile Card</a>
+            </div>
+        </div> 
+        <div class="search">
+        <input type="text" placeholder="Search">
+        <button value="submit">Submit
+        </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="01.jfif" width="30%">
+            <img src="02.jfif" width="30%">
+            <img src="03.jfif" width="30%">
+            <img src="05.jfif" width="30%">
+            <img src="07.jfif" width="30%">
+            <img src="06.jfif" width="30%">
+
+        </div>
+       
+        <div class="column">
+    <H1 style="text-align: left; color: darkorange; font-family: 'Times New Roman', Times, serif;">Royal Travel Company</H1>
+    <P style="text-align: left; color: rgb(255, 255, 255); font-family: 'Times New Roman', Times, serif;">Welcome to our company.<br>We provide safe travels to your desired destinations.<br>
+        You will enjoy a lot of different Services like Hotels for night stay at different famous spots, with amazing restaurants to try out different cuisines.<br>
+       <P>
+        
+        </div>
+        
+        <div class="column">
+            <form class="plan" action="output.php" method="post">
+        <fieldset>
+            <legend style="color:white;">Plan Your Trip</legend>
+          
+          <label for="days" style="color:white;">Maximum days:</label><br>
+          <input type="number"name = "Maximumdays" placeholder="Enter Days" required> 
+           <br><br>
+            <label for="destination" style="color: white;">Destination:</label><br>
+            <select name = "destination" required> 
+                <option>Murree</option>
+                <option>Naran kaghan</option>
+                <option>Swat</option>
+                <option>Lahore</option>
+                <option>Kalam</option>
+                <option>Islamabaad</option>
+                <option>Azad kashmir</option>
+                <option>Malam jabba</option>
+    
+              </select><br><br>
+         <label for="budget" style="color: white;">Budget</label><br>
+         <input type="number" name="budget" required><br><br>
+           <input type="submit" name="submit" value="submit">
+        </fieldset> 
+        </form>
+
+        </div>
+        <div class="column">
+           <h1 style="text-align: center; font-family:'Times New Roman', Times, serif; font-weight:100; color:darkorange;">Suggested Plans</h1>
+           <p style="text-align:center; font-family:'Times New Roman', Times, serif;font-size:medium; color:aliceblue;">
+                <a href="plan.html" style="color: white;">Check some suggested plans.</a>
+
+           
+        </div>
+       
+
+    </div>
+</body>
+</html>
